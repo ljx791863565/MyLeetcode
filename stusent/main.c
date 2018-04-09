@@ -22,6 +22,7 @@ int main()
 				break;
 			default:
 				defaultShow();
+				break;
 		}
 
 	}

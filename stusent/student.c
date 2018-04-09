@@ -3,6 +3,7 @@
 
 void midShow()
 {
+	system("clear");
 	printf("\t\t欢迎来到学生管理系统\n");
 	printf("\n");
 	printf("\t\t1.学生\n");
@@ -14,8 +15,9 @@ void midShow()
 
 }
 
-void studentShow()
+void studentSecandShow()
 {
+	system("clear");
 	printf("this is student\n");
 	printf("\n");
 	printf("\t\t1.注册\n");
@@ -23,11 +25,15 @@ void studentShow()
 	printf("\t\t3.返回\n");
 	printf("\n");
 	printf("\n");
-	int num;
-	printf("\t\t请选择\n");
-	scanf("%d", &num);
+}
+void studentShow()
+{
+	int num2;
 	while (1){
-		switch (num){
+		printf("\t\t请选择\n");
+		scanf("%d", &num2);
+		studentSecandShow();
+		switch (num2){
 			case 1:
 				studentRegister();
 				break;

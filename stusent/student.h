@@ -7,8 +7,6 @@
 struct Student{
 	int id;
 	char name[20];
-	int age;
-	char sex;
 	float score;
 };
 
@@ -17,5 +15,14 @@ struct Stu{
 	struct Stu *next;
 };
 
-
+extern void midShow();
+extern void studentShow();
+extern void teacherShow();
+extern void rootShow();
+extern void quitShow();
+extern void defaultShow();
+extern void studentSecandShow();
+extern void studentRegister();
+extern void studentLogin();
+extern void studentQuit(); 
 #endif
