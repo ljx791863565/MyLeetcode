@@ -1,30 +1,29 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 #include "student.h"
 
-int main()
+int main(int argc, char** argv)
 {
-	int num;
+	ST *head = NULL;
+	system("clear");
+	Version_info();
+	sleep(2);
 	while (1){
-		midShow();
-		printf("请输入:\n");
-		scanf("%d", &num);
-		switch (num){
+		switch (menu())
+		{
 			case 1:
-				studentShow();
+				Login();
 				break;
 			case 2:
-				teacherShow();
+				Register(head);
 				break;
 			case 3:
-				rootShow();
+//				Quit();
 				break;
-			case 4:
-				quitShow();
-				break;
-			default:
-				defaultShow();
-				break;
-		}
-
+//			default:
+//				DefaultShow();
+		}			
 	}
 	return 0;
 }

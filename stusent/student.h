@@ -3,26 +3,25 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-
-struct Student{
-	int id;
+#include <string.h>
+#include "student.h"
+typedef struct Student{
+	int num;
 	char name[20];
-	float score;
-};
+	char sex;
+	int chinese;
+	int math;
+	int english;
+	struct Student *next;
+}ST;
 
-struct Stu{
-	struct Student value;
-	struct Stu *next;
-};
+//保存用户账号密码的结构体
+typedef struct The_users{
+	char id[20];
+	char passwd[20];
+}users;
 
-extern void midShow();
-extern void studentShow();
-extern void teacherShow();
-extern void rootShow();
-extern void quitShow();
-extern void defaultShow();
-extern void studentSecandShow();
-extern void studentRegister();
-extern void studentLogin();
-extern void studentQuit(); 
+
+int menu();
+void Version_info();
 #endif
