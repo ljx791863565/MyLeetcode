@@ -33,23 +33,20 @@ void BinToDec()
 {
 	int k, d=0, i;
 	char lese[33], n;
+here:
 	printf("请输入二进制\n");
-	while (scanf("%s", lese) != EOF){
-		if (strlen(lese) > 32 || strlen(lese) < 0){
-			printf("输入有误\n");
-			return;
+	while (scanf("%c", &n) != EOF){
+		if (n > '1' || n < '0'){
+			if (n != '\n'){
+				gets(lese);
+				goto here;
+			}
 		}
-		n = strlen(lese);
-		for (i=0; i<=n+1; ++i){
-			if (lese[i] > '1' || lese[i] < '0'){
-				printf("输入不是二进制\n");
-				return ;
-			}
-			if (lese[i] != '\n'){
-				d = d *2 + lese[i] - '0';
-			}else{
-				printf("转换成十进制: %d\n", d);
-			}
+		if (n != '\n'){
+			d = d *2 + n - '0';
+		}else{
+			printf("转换成十进制: %d\n", d);
+			d = 0;
 		}
 	}
 	
