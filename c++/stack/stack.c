@@ -79,7 +79,7 @@ void Pop(Stack s)
 		return ;
 	}
 	temp = s->next;
-	s->next = temp->next->next;
+	s->next = s->next->next;
 	free(temp);
 }
 
