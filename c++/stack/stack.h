@@ -12,7 +12,7 @@ typedef struct Node
 }Node, *Stack;
 
 int IsEmpty(Stack s);
-Stack Create_Stack(Stack s);
+Stack Create_Stack();
 void Dispose_Stack(Stack s);
 void MakeEmpty(Stack s);
 void Push(ElementType data, Stack s);

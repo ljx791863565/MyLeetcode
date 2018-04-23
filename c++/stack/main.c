@@ -2,8 +2,7 @@
 
 int main()
 {
-	Stack s;
-	Create_Stack(s);	
+	Stack s= Create_Stack();	
 
 	Push(3, s);
 	Push(4, s);
@@ -15,4 +14,6 @@ int main()
 	Pop(s);
 	printf("top = %d\n",Top(s));
 
+	Dispose_Stack(s);
+	Pop(s);
 }

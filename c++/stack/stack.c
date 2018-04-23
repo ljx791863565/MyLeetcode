@@ -3,15 +3,16 @@
 //0 : 非空   1 ：空
 int IsEmpty(Stack s)
 {
-	if (s == NULL){
+	if (s->next ==  NULL){
 		return 1;
 	}else {
 		return 0;
 	}
 }
 
-Stack Create_Stack(Stack s)
+Stack Create_Stack()
 {
+	Stack s;
 	s = (Node *)malloc(sizeof(Node));
 	if (s == NULL){
 		perror("malloc\n");
@@ -34,6 +35,7 @@ void Dispose_Stack(Stack s)
 		p = p->next;
 		s = p;
 	}
+	printf("despose Stack\n");
 }
 
 void MakeEmpty(Stack s)
@@ -79,7 +81,7 @@ void Pop(Stack s)
 		return ;
 	}
 	temp = s->next;
-	s->next = temp->next->next;
+	s->next = s->next->next;
 	free(temp);
 }
 
