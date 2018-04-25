@@ -151,7 +151,7 @@ LinkedList LinkedList_Delete(LinkedList head, int data)
 	Node *t = LinkedList_Find(head, data);
 	if (t == NULL){
 		printf("no data can delete\n");
-		return ;
+		return NULL;
 	}
 	if (t == head){
 		t->next->prev = head->next;
