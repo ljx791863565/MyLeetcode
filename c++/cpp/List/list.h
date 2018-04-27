@@ -197,7 +197,7 @@ inline void CSList<T>::RemoveAt(const int pos)
 	assert(1 <= pos && pos <= m_nCount);
 
 	int i;
-	CNode<T> *pTmpNode1, pTmpNode2;
+	CNode<T> *pTmpNode1, *pTmpNode2;
 	pTmpNode1 = m_pNodeHead;
 
 	if (1 == pos){
@@ -215,12 +215,18 @@ Exit1:
 	--m_nCount;
 }
 
+template <typename T>
+inline void CSList<T>::RemoveTail()
+{
+	assert(0 != m_nCount);
+	RemoveAt(m_nCount);
+}
 
 template <typename T>
 inline void CSList<T>::RemoveHead()
 {
 	assert(0 != m_nCount);
-	RemoveAt(m_nCount);
+	RemoveAt(1);
 }
 
 template <typename T>

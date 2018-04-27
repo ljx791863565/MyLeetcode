@@ -10,6 +10,10 @@ int main()
 	slist.InsertAfter(slist.GetCount(), 6);
 	slist.AddTail(10);
 	slist.InsertBefore(slist.InsertBefore(slist.GetCount(), 7), 8);
+
+//	slist.RemoveHead();
+//	slist.RemoveTail();
+//	slist.RemoveAt(5);
 	
 	int i, nCount;
 	nCount = slist.GetCount();
@@ -18,6 +22,9 @@ int main()
 		cout << slist.GetAt(i+1) << " " ;
 	}	
 	cout << endl;
+
+	int num = slist.GetTail();
+	cout << num << endl;
 	
 	return 0;
 }
