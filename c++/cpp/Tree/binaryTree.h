@@ -8,15 +8,10 @@ template <typename T>
 class CBTNode
 {
 public:
-	CBTNode(
-		T data,
-		CBTNode<T> *parrnt = NULL,
-		CBTNode<T> *left = NULL,
-		CBTNode<T> *right = NULL
-		) : data(data), parent(parent), left(left), right(right)
-	{
-
-	}
+	CBTNode(T data = T(),
+			CBTNode<T> *parent = NULL,
+			CBTNode<T> *left = NULL,
+			CBTNode<T> *right = NULL) : data(data), parent(parent), left(left), right(right){}
 public:
 	T data;
 	CBTNode<T> *parent;
@@ -82,7 +77,7 @@ private:
 		)const;
 
 	void GetNodesCount(const CBTNode<T> *p, unsigned int *unCount) const;
-	void GetLeafCount(const CBTNode<T> *p, unsigned int *unCount) const;
+	void GetLeafsCount(const CBTNode<T> *p, unsigned int *unCount) const;
 
 protected:
 	CBTNode<T> *m_pNodeRoot;
@@ -367,13 +362,13 @@ template <typename T>
 inline unsigned int CBTree<T>::GetLeafCount() const
 {
 	unsigned int unCount = 0;
-	GetLeafCount(m_pNodeRoot, &unCount);
+	GetLeafsCount(m_pNodeRoot, &unCount);
 	return unCount;
 }
 
 //if the node's left && right children are both NULL, it must be a leaf
 template <typename T>
-inline unsigned int GetLeafCount(
+inline void GetLeafsCount(
 		const CBTNode<T> *p,
 		unsigned int *unCount)
 {
