@@ -1,5 +1,5 @@
 备份脚本
 备份七天，多余的自动删除
 
-在linux下运行 crontab -b 添加到系统运行。
+在linux下运行 crontab -e 添加到系统运行。
 
