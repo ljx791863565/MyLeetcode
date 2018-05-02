@@ -23,7 +23,7 @@ int main()
 	}	
 	cout << endl;
 
-	int num = slist.GetTail();
+	int num = slist.GetHead();
 	cout << num << endl;
 	
 	return 0;
