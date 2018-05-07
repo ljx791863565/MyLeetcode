@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 //欧几里得算法
+//求解最大公约数
 int gcd(int p, int q)
 {
 	if (q == 0){
