@@ -1,0 +1,28 @@
+线性表的顺序表示：用一组地址连续的储存单元依次储存线性表的数据元素
+
+假设每个元素占用 n 个储存单元，以所占的第一个单元的存储地址作为数据元素的储存位置。
+
+那么：第 i+1 个数据元素的储存位置满足
+						LOC(ai + 1) = LOC(ai) + n
+	  线性表的第 i 个元素 ai 的储存位置满足
+						LOC(ai) = LOC(a1) + (i-1) *n
+
+	  LOC(a1) 是线性表的第一个元素 a1 的储存位置，通常作为线性表的起始位置
+	
+	  只要确定了线性表的起始位置和线性表的元素个数，可以得到任意一个元素的地址，即可以对任意一个元素做读写操作
+
+	  因此通常利用数组来描述这个顺序结构
+
+#define LIST_LINE_SIZE 100 //线性表储存空间的初始分配量
+#define LISTINCREMENT 10   //线性表储存空间分配增量
+
+typedef int ElementType
+typedef struct
+{
+	ElememtType *elem;		//储存空间起始地址
+	int			length;		//当前长度
+	int			listsize	//当前分配的储存容量(sizeof(ElementType) 为单位)
+}SqList;
+
+	
+

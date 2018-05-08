@@ -1,0 +1,18 @@
+
+
+栈 Stack ：限定在表尾进行插入或删除操作的线性表  先进后出LIFO
+ADT Stack{
+	InitSatck(S)	构造一个空栈S
+	DestroyStack(S)	销毁栈
+	ClearStack(S)	清空栈
+	StackEmpty(S)	判断栈S是否为空
+	StackLength(S)	获得栈的长度
+	GetTop(S)		返回栈顶元素
+	Push(S, x)		元素压栈
+	Pop(S)			元素弹栈
+	StackTraverse(S, Visit())	栈的遍历，对栈S每个元素调用Visit(),一旦Visit()调用失败，则整个遍历操作失败
+}；
+
+
+
+
