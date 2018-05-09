@@ -1,5 +1,5 @@
 #include <stdio.h>
-//二维数组作为函数参数的传参
+/*二维数组作为函数参数的传参*/
 void showInt(int (*p)[4], int n, int m)
 {
 	int i, j;
