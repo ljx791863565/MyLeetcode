@@ -1,0 +1,17 @@
+
+#静态库制作
+
+//得到两个.o 文件
+$ gcc -O -c pr1.c pr2.c
+
+//链接静态库
+//静态库的命名规则必须按照 lib[name].a
+$ ar -rsv libpr.a pr1.o pr2.o
+
+//将自己的库放在固定地方方便调用
+$ sudo cp libpr.a /usr/lib/
+
+//使用自己的库  -l接上库名字 -L接上库的路径，(如果在系统库位置 /usr/lib/ ，则省略)
+$ gcc -o main main.c -lpr
+
+$ ./main
