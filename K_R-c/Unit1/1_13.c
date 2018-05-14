@@ -20,7 +20,7 @@ int main()
 	for (i=0; i<MAXWORD; ++i){
 		wl[i] = 0;
 	}
-	while ((c = getchar()) != EOF){
+	while ((c = getchar()) != 27){
 		if (c == ' ' || c == '\n' || c == '\t'){
 			state = OUT;
 			if (nc > 0){
