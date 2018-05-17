@@ -10,6 +10,7 @@ friend istream& operator>>(istream &in, BigNum &b);
 friend ostream& operator<<(ostream &out, const BigNum &b);
 friend bool operator==(const BigNum &lhs, const BigNum &lhs);
 friend bool operator!=(const BigNum &lhs, const BigNum &lhs);
+friend BigNum& operator+(const BigNum &lhs, const BigNum &rhs);
 public:
 	BigNum() = default;
 	BigNum(const string &s) : str(s)
@@ -46,6 +47,10 @@ bool operator==(const BigNum &lhs, const BigNum &rhs)
 bool operator!=(const BigNum &lhs, const BigNum &rhs)
 {
 	return !(lhs == rhs);
+}
+BigNum& BigNum::operator+(const BigNum &rhs, const BigNum &rhs)
+{
+	
 }
 #endif //__BIGNUM__H__
 

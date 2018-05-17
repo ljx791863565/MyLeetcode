@@ -997,7 +997,7 @@ int main(int argc, char ** argv) //./server 8080
 				memset(buff, 0, 1024);
 
 				ret = read(readFd, buff, 1024);
-				if(ret < 0)
+			if(ret < 0)
 				{
 					continue;
 				}

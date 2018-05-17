@@ -46,4 +46,5 @@
 
 #define SA struct sockaddr
 #define BUFSIZE 1024	//缓存数据的大小
+#define MAXLISTEN 5
 #endif //__UNP__H
