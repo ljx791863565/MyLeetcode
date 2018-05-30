@@ -42,8 +42,9 @@ int isIDok(char *id)
 		ret = fread(&test, sizeof(test), 1, fp);
 		if (ret <= 0){
 			perror("fread");
-			<F10>
+			return -1;
 		}
+		if (test.)
 
 	}
 }
