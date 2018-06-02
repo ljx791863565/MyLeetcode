@@ -11,7 +11,7 @@ int main()
 	mysql_real_query(&mysql, "select * from info", 16);
 
 	MYSQL_RES *res = mysql_store_result(&mysql);
-	int num_fields = mysql_num_fields(res);
+	int num_fields = mysql(res);
 
 	MYSQL_ROW row;
 	while ((row = mysql_fetch_row(res))){

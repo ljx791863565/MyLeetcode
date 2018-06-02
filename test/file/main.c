@@ -7,31 +7,31 @@ typedef struct Users
 {
 	char ID[20];
 	char Passwd[20];
-}*Users;
+}Us;
 
-int getUsers(Users *test)
+FILE *fp;
+int getUsers(Us *test)
 {
-	USers test;
 	printf("input the ID:\n");
-	scanf("%s", test->ID);
+	scanf("%s", test.ID);
 	printf("input the Passwd:\n");
-	scanf("%s", test->Passwd);
+	scanf("%s", test.Passwd);
 
 	return 0;
 }
 
-int saveFile(FILE *fp, Users *test)
+int saveFile(Us *test)
 {
-	int ret = fwrite(test, sizeof(struct Users), fp);
+	int ret = fwrite(test, sizeof(Us), fp);
 }
 
 int main()
 {
-	FILE *fp = fopen("users.txt", "r");
-	Users us;
+	fp = fopen("users.txt", "r");
+	Us us;
    	getUsers(&us);
 
-	saveFile(fp, &us);
+	saveFile(&us);
 
 	fclose(fp);
 	return 0;
