@@ -1,5 +1,9 @@
 #include "unp.h"
 
+void *handler(void *arg)
+{
+
+}
 int main(int argc, char *argv[])
 {
 	if (argc != 3){
@@ -11,7 +15,7 @@ int main(int argc, char *argv[])
 		perror("socket");
 		return -1;
 	}
-	SA serverAddr;
+	struct sockaddr_in serverAddr;
 	memset(&serverAddr, 0, sizeof(serverAddr));
 
 	serverAddr.sin_family = AF_INET;
@@ -25,15 +29,20 @@ int main(int argc, char *argv[])
 	}
 
 	pthread_t pid;
-	if (pthread_create(&pid, NULL, handler, &sockfd) == NULL){
+	if (pthread_create(&pid, NULL, handler, &sockfd)<0){
 		perror("pthread_create");
 		return -1;
 	}
 	
-	char buf[BUFFSIZE];
+	char buf[BUFSIZE];
 	int choose;
+	int ret;
 	while (1){
-		
+		memset(&buf, 0, sizeof(buf));
+		ret = read(0, buf, BUFSIZE);
+		ret = write(sockfd, buf, ret);
 	}
+	pthread_join(pid, NULL);
+	close(sockfd);
 	return 0;
 }
