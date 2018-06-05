@@ -4,7 +4,9 @@
 #include <sys/types.h>
 #include <fcntl.h>
 #include <sys/stat.h>
+#include <unistd.h>
 
+#define BUFSIZE 1024
 void Users()
 {
 	printf("USers error\n");
@@ -16,7 +18,7 @@ int main(int argc, char *argv[])
 		return -1;
 	}
 	
-	char buf[1024];
+	char buf[BUFSIZE];
 	memset(buf, 0, sizeof(buf));
 
 	int fd = open(argv[1], O_RDONLY);
@@ -29,7 +31,8 @@ int main(int argc, char *argv[])
 		perror("open: fd1");
 		return -1;
 	}
-	int ret = read(fd, buf, 1024);
+	//read不会在读取时加入字符串结束符号'\0'，所以最大预读长度要比缓冲区小1
+	int ret = read(fd, buf, BUFSIZE-1);
 	if (ret < 0){
 		perror("read");
 		return -1;
