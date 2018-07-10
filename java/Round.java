@@ -12,7 +12,12 @@ public class Round
 	/*
 	* 绘制圆形图像，输入半径，输出图形
 	*/
-	public static void paint(int r)
+	private static int r;
+	Round(int r)
+	{
+		this.r = r;
+	}
+	public static void paint()
 	{
 		//假定圆心在(r, r)处
 		int x = 0;	//x的坐标开始
@@ -20,7 +25,7 @@ public class Round
 		int c = 0;	//中间格数量
 		int z = 2;	//递减
 
-		for (int i = r*2; i >= 0; i -= z){
+		for (int i = y; i >= 0; i -= z){
 			x = getX(r, y);
 			System.out.println(getSpace(x) + "*");
 			c = (r - x) * 2;
@@ -34,7 +39,6 @@ public class Round
 	public static int getX(int r, int y)
 	{
 		int h = y - r;
-		System.out.println("h = " + h);
 		double l = Math.sqrt((r * r) - (h * h));
 		return (int)Math.round(r-l);
 	}
@@ -51,6 +55,6 @@ public class Round
 	}
 	public static void main(String [] argv)
 	{
-		paint(6);
+		new Round(10).paint();
 	}
 }
