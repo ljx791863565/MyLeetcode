@@ -15,10 +15,15 @@ public class TestIterator
 			String book = (String)it.next();
 			System.out.println(book);
 
-			if (book.equals("疯狂java讲义")){
-				it.remove();
-			}
+//			if (book.equals("疯狂java讲义")){
+//				it.remove();
+//			}
 		}
 		System.out.println(books);
+
+		for (Object obj : books){
+			String book = (String)obj;
+			System.out.println(book);
+		}
 	}
 }
