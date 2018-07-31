@@ -94,11 +94,11 @@ SearchTree Delete(ElementType x, SearchTree t)
 		printf("not find element\n");
 		return NULL;
 	}
-
+/*
 	if (temp->left != NULL){
 		insert(&temp->element, );
 	}
-
+*/
 }
 
 //树的深度

@@ -27,11 +27,11 @@ int main()
 	PostOrderTraverse(p);
 	printf("\n");
 
-	printf("Min element = %d\n", FindMin(p)->element);
-	printf("Max element = %d\n", FindMax(p)->element);
-
-	printf("find %d element ok\n", Find(10, p)->element);
-	printf("depth = %d\n", Depth(p));
-	printf("leaf lavel = %d\n",GetLeafLevel(p));
+//	printf("Min element = %d\n", FindMin(p)->element);
+//	printf("Max element = %d\n", FindMax(p)->element);
+//
+//	printf("find %d element ok\n", Find(10, p)->element);
+//	printf("depth = %d\n", Depth(p));
+//	printf("leaf lavel = %d\n",GetLeafLevel(p));
 	return 0;
 }
