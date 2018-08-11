@@ -1,5 +1,5 @@
 
-
+import java.util.*;
 public class Test{
 	public static void main(String [] argv){
 		System.out.println("hello world!");
@@ -10,5 +10,8 @@ public class Test{
 		for (int at : array){
 			System.out.println(at);
 		}
+		System.out.println(new Date());
+		String s = new Date().toString();
+		System.out.println(s);
 	}
 }
