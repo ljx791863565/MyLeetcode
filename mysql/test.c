@@ -7,7 +7,7 @@ int main()
 {
 	MYSQL mysql;
 	mysql_init(&mysql);
-	mysql_real_connect(&mysql, NULL, "root", "123", "stu", 0, NULL, 0);
+	mysql_real_connect(&mysql, NULL, "root", "", "stu", 0, NULL, 0);
 	mysql_real_query(&mysql, "select * from info", 16);
 
 	MYSQL_RES *res = mysql_store_result(&mysql);

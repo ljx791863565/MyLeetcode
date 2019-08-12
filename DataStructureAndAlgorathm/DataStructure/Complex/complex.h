@@ -4,7 +4,7 @@
    */
 
 #ifndef __COMPLEX__H__
-#define __OOMPLEX__H__
+#define __COMPLEX__H__
 #include <iostream>
 
 using namespace std;
@@ -106,4 +106,4 @@ public:
 
 		return c;
 	}
-#endif //__COMPLEX__H__
+#endif 

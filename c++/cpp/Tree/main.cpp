@@ -60,7 +60,7 @@ int main()
 	cout << " (" << btree.GetNodeData(btree.GetLeftChild(btree.GetRoot())) 
 		<< " ) (" << btree.GetNodeData(btree.GetRightChild(btree.GetRoot()))
 		<< " ) " << endl << endl;
-	cout << "这棵树的叶子数:" << btree.GetLeafCount() << endl;
+//	cout << "这棵树的叶子数:" << btree.GetLeafsCount() << endl;
 
 	cout << "这棵树的深度: " << btree.GetDepth() << endl;
 

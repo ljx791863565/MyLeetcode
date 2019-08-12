@@ -32,7 +32,7 @@ public class Arith
 	}
 	public static void main(String []args)
 	{
-		System.out.println("0.05 + 0.01 = " + Arith.add(0.05, 0.01));
+		System.out.println("0.05 + 0.01 = " + Arith.add(0.02, 0.01));
 		System.out.println("0.05 - 0.02 = " + Arith.sub(0.05, 0.01));
 	//	System.out.println("4.105 * 100 = " + Arith.mul(4.105, 100));
 		System.out.println("123.3 / 100 = " + Arith.div(123.3, 100));
